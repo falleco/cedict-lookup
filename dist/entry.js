@@ -1,5 +1,6 @@
 "use strict";
-var Entry = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var Entry = /** @class */ (function () {
     function Entry(trad, simpl, pinyin, english) {
         this.traditional = trad;
         this.simplified = simpl;

@@ -2,7 +2,7 @@
   "name": "cedict-lookup",
   "version": "0.0.1",
   "description": "Look up Chinese words in CC-CEDICT",
-  "main": "src/cedict.js",
+  "main": "dist/cedict.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/takumif/cedict-lookup.git"
@@ -16,6 +16,10 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/takumif/cedict-lookup/issues"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "start": "npm run build -- -w"
   },
   "homepage": "https://github.com/takumif/cedict-lookup#readme",
   "devDependencies": {

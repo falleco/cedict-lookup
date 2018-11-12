@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var parser_1 = require("./parser");
 /**
  * An implementation of Cedict using the prefix tree data structure.
@@ -6,7 +7,7 @@ var parser_1 = require("./parser");
  * entries formed by the characters in the path from the root to the node.
  * It uses the traditional attribute as the lookup key into the tree.
  */
-var Cedict = (function () {
+var Cedict = /** @class */ (function () {
     function Cedict(filename, trad) {
         var entries = parser_1.CedictParser.parse(filename);
         this.traditional = trad;
@@ -83,7 +84,7 @@ var Cedict = (function () {
     };
     return Cedict;
 }());
-var CedictNode = (function () {
+var CedictNode = /** @class */ (function () {
     function CedictNode(w) {
         this.word = w;
         this.entries = [];
@@ -91,11 +92,11 @@ var CedictNode = (function () {
     }
     return CedictNode;
 }());
-function loadTraditional(filename) {
-    return new Cedict(filename, true);
+function loadTraditional(text) {
+    return new Cedict(text, true);
 }
 exports.loadTraditional = loadTraditional;
-function loadSimplified(filename) {
-    return new Cedict(filename, false);
+function loadSimplified(text) {
+    return new Cedict(text, false);
 }
 exports.loadSimplified = loadSimplified;

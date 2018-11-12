@@ -1,14 +1,13 @@
 "use strict";
-var fs_1 = require("fs");
+Object.defineProperty(exports, "__esModule", { value: true });
 var entry_1 = require("./entry");
-var CedictParser = (function () {
+var CedictParser = /** @class */ (function () {
     function CedictParser() {
     }
     /**
      * Parses a CEDICT text file into a list of entries
      */
-    CedictParser.parse = function (file) {
-        var text = fs_1.readFileSync(file, "utf-8");
+    CedictParser.parse = function (text) {
         return CedictParser.parseCedictText(text);
     };
     CedictParser.parseCedictText = function (text) {
